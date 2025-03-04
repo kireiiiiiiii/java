@@ -8,10 +8,10 @@ public class Recursion {
             return -1;
         }
         System.out.println("*");
-        int star = printStar(i+1);
+        int star = printStar(i + 1);
         if (star != -1) {
             printStar(i);
         }
-        return 0;    
+        return 0;
     }
 }

@@ -11,8 +11,7 @@ public class AddSubstract {
             input = console.nextInt();
             if (input < 0) {
                 sum -= Math.abs(input);
-            }
-            else {
+            } else {
                 sum += input;
             }
         }

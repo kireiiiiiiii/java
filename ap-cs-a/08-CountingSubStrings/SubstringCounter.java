@@ -1,6 +1,6 @@
 public class SubstringCounter {
-    public static void main(String[] args){
-        String[] input = {"BaBaBa", "Ba"};
+    public static void main(String[] args) {
+        String[] input = { "BaBaBa", "Ba" };
         int output = counter(input[0], input[1]);
         System.out.println("Text: " + input[0]);
         System.out.println("Subtext: " + input[1]);
@@ -12,18 +12,17 @@ public class SubstringCounter {
         int subStringIndex;
         int lenght = subText.length();
         if (lenght == 0) {
-           return 0;
+            return 0;
         }
-        while (true){
+        while (true) {
             subStringIndex = text.indexOf(subText);
             if (subStringIndex >= 0) {
-                text = text.substring(subStringIndex+lenght);
+                text = text.substring(subStringIndex + lenght);
                 subStringCount++;
-            }
-            else {
+            } else {
                 break;
             }
         }
         return subStringCount;
-    }   
+    }
 }

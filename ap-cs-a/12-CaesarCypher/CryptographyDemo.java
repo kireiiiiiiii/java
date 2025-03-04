@@ -8,20 +8,21 @@ public class CryptographyDemo {
     public static String createCypher(int n) {
         /*
          * --------------
-         * createCypher 
+         * createCypher
          * --------------
          * n : int
-         *  Specifies the seed for our Caesar cypher. We assume that 0 <= n < 26. 
-         * 
+         * Specifies the seed for our Caesar cypher. We assume that 0 <= n < 26.
+         *
          * returns String
-         *  Return the Caesar cypher we create by "shifting" the alphabet over n times to the right.
+         * Return the Caesar cypher we create by "shifting" the alphabet over n times to
+         * the right.
          * --------------
          * Examples:
-         *  n = 1
-         *  >> zabc...vwxy (alphabet shifted over to the right 1 time)
-         * 
-         *  n = 25
-         *  >> bcde...xyza (alphabet shifted over to the right 25 times)
+         * n = 1
+         * >> zabc...vwxy (alphabet shifted over to the right 1 time)
+         *
+         * n = 25
+         * >> bcde...xyza (alphabet shifted over to the right 25 times)
          */
 
         // your code here:
@@ -31,22 +32,23 @@ public class CryptographyDemo {
     public static char encryptChar(String cypher, char c) {
         /*
          * --------------
-         * encryptChar 
+         * encryptChar
          * --------------
          * cypher : String
-         *  Our cypher, a string with 26 lower-case characters that shuffle the order of the alphabet.
+         * Our cypher, a string with 26 lower-case characters that shuffle the order of
+         * the alphabet.
          * c : char
-         *  The character we want to encrypt. We assume that c is lower-case.
-         * 
+         * The character we want to encrypt. We assume that c is lower-case.
+         *
          * returns char
-         *  Returns the encrypted character using our cypher.
+         * Returns the encrypted character using our cypher.
          * --------------
          * Example:
-         *  c = a
-         *  cypher = bcde...xyza
-         *  >> b
+         * c = a
+         * cypher = bcde...xyza
+         * >> b
          */
-        
+
         // your code here:
         return ' ';
     }
@@ -54,15 +56,16 @@ public class CryptographyDemo {
     public static String encryptString(String cypher, String input) {
         /*
          * --------------
-         * encryptString 
+         * encryptString
          * --------------
          * cypher : String
-         *  Our cypher, a string with 26 lower-case characters that shuffle the order of the alphabet.
+         * Our cypher, a string with 26 lower-case characters that shuffle the order of
+         * the alphabet.
          * input : String
-         *  The message that we want to encrypt.
-         * 
+         * The message that we want to encrypt.
+         *
          * returns String
-         *  Returns the encrypted message using our cypher.
+         * Returns the encrypted message using our cypher.
          * --------------
          */
 
@@ -73,22 +76,23 @@ public class CryptographyDemo {
     public static char decryptChar(String cypher, char c) {
         /*
          * --------------
-         * decryptChar 
+         * decryptChar
          * --------------
          * cypher : String
-         *  Our cypher, a string with 26 lower-case characters that shuffle the order of the alphabet.
+         * Our cypher, a string with 26 lower-case characters that shuffle the order of
+         * the alphabet.
          * c : char
-         *  The character we want to decrypt. We assume that c is lower-case.
-         * 
+         * The character we want to decrypt. We assume that c is lower-case.
+         *
          * returns char
-         *  Returns the decrypted character using our cypher.
+         * Returns the decrypted character using our cypher.
          * --------------
          * Example:
-         *  c = a
-         *  cypher = bcde...xyza
-         *  >> z
+         * c = a
+         * cypher = bcde...xyza
+         * >> z
          */
-        
+
         // your code here:
         return ' ';
     }
@@ -96,27 +100,27 @@ public class CryptographyDemo {
     public static String decryptString(String cypher, String input) {
         /*
          * --------------
-         * decryptString 
+         * decryptString
          * --------------
          * cypher : String
-         *  Our cypher, a string with 26 lower-case characters that shuffle the order of the alphabet.
+         * Our cypher, a string with 26 lower-case characters that shuffle the order of
+         * the alphabet.
          * input : String
-         *  The message that we want to decrypt.
-         * 
+         * The message that we want to decrypt.
+         *
          * returns String
-         *  Returns the decrypted message using our cypher.
+         * Returns the decrypted message using our cypher.
          * --------------
          */
-        
+
         // your code here:
         return "";
     }
 
-
     // ------------------------------------------------------------------------
-    //  YOU DO NOT NEED TO EDIT, READ, OR WORRY ABOUT THE REST OF THE CODE!!!
+    // YOU DO NOT NEED TO EDIT, READ, OR WORRY ABOUT THE REST OF THE CODE!!!
     //
-    // You are completely welcome to take a look! You will probably 
+    // You are completely welcome to take a look! You will probably
     // be pleased to see that you can understand a good amount of it!
     // But really, the heart of this entire program is the code that you
     // will write above :)
@@ -162,7 +166,7 @@ public class CryptographyDemo {
                 System.out.println("Your selection is invalid. Please re-type your selection below:");
                 input = console.nextLine().trim();
             }
-        } 
+        }
     }
 
     public static String interactiveCreateCypher(Scanner console) {
@@ -171,7 +175,8 @@ public class CryptographyDemo {
         int n = console.nextInt();
         console.nextLine(); // nextInt doesn't read newline character
         while (n < 0 || n >= 26) {
-            System.out.println("Your chosen number " + n + " is out of bounds. Please re-type a number between 0 and 26.");
+            System.out.println(
+                    "Your chosen number " + n + " is out of bounds. Please re-type a number between 0 and 26.");
             n = console.nextInt();
             console.nextLine(); // nextInt doesn't read newline character
         }
@@ -232,20 +237,20 @@ public class CryptographyDemo {
         // first off, if we don't shift the alphabet, it shouldn't change!
         int n = 0;
         String expectedSolution = ALPHABET;
-        assert(expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 0";
+        assert (expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 0";
 
         // test the examples from out handout
         n = 1;
         expectedSolution = "zabcdefghijklmnopqrstuvwxy";
-        assert(expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 1";
+        assert (expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 1";
 
         n = 4;
         expectedSolution = "wxyzabcdefghijklmnopqrstuv";
-        assert(expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 4";
-        
+        assert (expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 4";
+
         n = 25;
         expectedSolution = "bcdefghijklmnopqrstuvwxyza";
-        assert(expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 25";
+        assert (expectedSolution.equals(createCypher(n))) : "Testing createCypher with n = 25";
 
         System.out.println("Fantastic! All tests passed!");
     }
@@ -255,21 +260,21 @@ public class CryptographyDemo {
 
         // create a short cypher with letters shifted by 1
         String cypher = "bcd";
-        assert(encryptChar(cypher, 'a') == 'b') : "Testing encryptChar shifted by 1 letter from a";
-        assert(encryptChar(cypher, 'b') == 'c') : "Testing encryptChar shifted by 1 letter from b";
-        assert(encryptChar(cypher, 'c') == 'd') : "Testing encryptChar shifted by 1 letter from c";
+        assert (encryptChar(cypher, 'a') == 'b') : "Testing encryptChar shifted by 1 letter from a";
+        assert (encryptChar(cypher, 'b') == 'c') : "Testing encryptChar shifted by 1 letter from b";
+        assert (encryptChar(cypher, 'c') == 'd') : "Testing encryptChar shifted by 1 letter from c";
 
         // now test a new cypher shifted by 4
         cypher = "efg";
-        assert(encryptChar(cypher, 'a') == 'e') : "Testing encryptChar shifted by 4 letters from a";
-        assert(encryptChar(cypher, 'b') == 'f') : "Testing encryptChar shifted by 4 letters from b";
-        assert(encryptChar(cypher, 'c') == 'g') : "Testing encryptChar shifted by 4 letters from c";  
-        
+        assert (encryptChar(cypher, 'a') == 'e') : "Testing encryptChar shifted by 4 letters from a";
+        assert (encryptChar(cypher, 'b') == 'f') : "Testing encryptChar shifted by 4 letters from b";
+        assert (encryptChar(cypher, 'c') == 'g') : "Testing encryptChar shifted by 4 letters from c";
+
         // lastly, test a cypher shifted by 24 (so letters wrap around!)
         cypher = "yza";
-        assert(encryptChar(cypher, 'a') == 'y') : "Testing encryptChar shifted by 24 letters from a";
-        assert(encryptChar(cypher, 'b') == 'z') : "Testing encryptChar shifted by 24 letters from b";
-        assert(encryptChar(cypher, 'c') == 'a') : "Testing encryptChar shifted by 24 letters from c";
+        assert (encryptChar(cypher, 'a') == 'y') : "Testing encryptChar shifted by 24 letters from a";
+        assert (encryptChar(cypher, 'b') == 'z') : "Testing encryptChar shifted by 24 letters from b";
+        assert (encryptChar(cypher, 'c') == 'a') : "Testing encryptChar shifted by 24 letters from c";
 
         System.out.println("Phenomenal! All tests passed!");
     }
@@ -277,23 +282,25 @@ public class CryptographyDemo {
     public static void testEncryptString() {
         System.out.println("Testing encryptString method...");
 
-        // for this one, we'll try a clever idea: if we encrypt the alphabet using our cypher,
+        // for this one, we'll try a clever idea: if we encrypt the alphabet using our
+        // cypher,
         // we should get back our cypher!
 
-        // for ease of reading, we'll use a shortened version of our alphabet and cyphers here
+        // for ease of reading, we'll use a shortened version of our alphabet and
+        // cyphers here
         String shortAlphabet = "abcdefghij";
 
         // create a short cypher with letters shifted by 1
         String cypher = "bcdefghija";
-        assert(encryptString(cypher, shortAlphabet).equals(cypher)) : "Testing encryptString shifted by 1 letter";
-        
+        assert (encryptString(cypher, shortAlphabet).equals(cypher)) : "Testing encryptString shifted by 1 letter";
+
         // now test a new cypher shifted by 4
         cypher = "efghijabcd";
-        assert(encryptString(cypher, shortAlphabet).equals(cypher)) : "Testing encryptString shifted by 4 letters";
-        
+        assert (encryptString(cypher, shortAlphabet).equals(cypher)) : "Testing encryptString shifted by 4 letters";
+
         // lastly, test a cypher shifted by 9 (so letters wrap around!)
         cypher = "jabcdefghi";
-        assert(encryptString(cypher, shortAlphabet).equals(cypher)) : "Testing encryptString shifted by 9 letters";
+        assert (encryptString(cypher, shortAlphabet).equals(cypher)) : "Testing encryptString shifted by 9 letters";
 
         System.out.println("Tremendous! All tests passed!");
     }
@@ -306,21 +313,21 @@ public class CryptographyDemo {
 
         // create a short cypher with letters shifted by 1
         String cypher = "bcd";
-        assert(decryptChar(cypher, 'b') == 'a') : "Testing encryption shifted by 1 letter from a";
-        assert(decryptChar(cypher, 'c') == 'b') : "Testing encryption shifted by 1 letter from b";
-        assert(decryptChar(cypher, 'd') == 'c') : "Testing encryption shifted by 1 letter from c";
+        assert (decryptChar(cypher, 'b') == 'a') : "Testing encryption shifted by 1 letter from a";
+        assert (decryptChar(cypher, 'c') == 'b') : "Testing encryption shifted by 1 letter from b";
+        assert (decryptChar(cypher, 'd') == 'c') : "Testing encryption shifted by 1 letter from c";
 
         // now test a new cypher shifted by 4
         cypher = "efg";
-        assert(decryptChar(cypher, 'e') == 'a') : "Testing encryption shifted by 4 letters from a";
-        assert(decryptChar(cypher, 'f') == 'b') : "Testing encryption shifted by 4 letters from b";
-        assert(decryptChar(cypher, 'g') == 'c') : "Testing encryption shifted by 4 letters from c";  
-        
+        assert (decryptChar(cypher, 'e') == 'a') : "Testing encryption shifted by 4 letters from a";
+        assert (decryptChar(cypher, 'f') == 'b') : "Testing encryption shifted by 4 letters from b";
+        assert (decryptChar(cypher, 'g') == 'c') : "Testing encryption shifted by 4 letters from c";
+
         // lastly, test a cypher shifted by 24 (so letters wrap around!)
         cypher = "yza";
-        assert(decryptChar(cypher, 'y') == 'a') : "Testing encryption shifted by 24 letters from a";
-        assert(decryptChar(cypher, 'z') == 'b') : "Testing encryption shifted by 24 letters from b";
-        assert(decryptChar(cypher, 'a') == 'c') : "Testing encryption shifted by 24 letters from c";
+        assert (decryptChar(cypher, 'y') == 'a') : "Testing encryption shifted by 24 letters from a";
+        assert (decryptChar(cypher, 'z') == 'b') : "Testing encryption shifted by 24 letters from b";
+        assert (decryptChar(cypher, 'a') == 'c') : "Testing encryption shifted by 24 letters from c";
 
         System.out.println("Astounding! All tests passed!");
     }
@@ -330,22 +337,24 @@ public class CryptographyDemo {
 
         // decryption is just the opposite of encryption, so we can take our
         // tests for encryptString and swap around the input and output! That is,
-        // if we decrypt the cypher with itself, we should get back the original alphabet!
+        // if we decrypt the cypher with itself, we should get back the original
+        // alphabet!
 
-        // for ease of reading, we'll use a shortened version of our alphabet and cyphers here
+        // for ease of reading, we'll use a shortened version of our alphabet and
+        // cyphers here
         String shortAlphabet = "abcdefghij";
 
         // create a short cypher with letters shifted by 1
         String cypher = "bcdefghija";
-        assert(decryptString(cypher, cypher).equals(shortAlphabet)) : "Testing encryptString shifted by 1 letter";
-    
+        assert (decryptString(cypher, cypher).equals(shortAlphabet)) : "Testing encryptString shifted by 1 letter";
+
         // now test a new cypher shifted by 4
         cypher = "efghijabcd";
-        assert(decryptString(cypher, cypher).equals(shortAlphabet)) : "Testing encryptString shifted by 4 letters";
-        
+        assert (decryptString(cypher, cypher).equals(shortAlphabet)) : "Testing encryptString shifted by 4 letters";
+
         // lastly, test a cypher shifted by 9 (so letters wrap around!)
         cypher = "jabcdefghi";
-        assert(decryptString(cypher, cypher).equals(shortAlphabet)) : "Testing encryptString shifted by 9 letters";
+        assert (decryptString(cypher, cypher).equals(shortAlphabet)) : "Testing encryptString shifted by 9 letters";
 
         System.out.println("Splendid! All tests passed!");
     }

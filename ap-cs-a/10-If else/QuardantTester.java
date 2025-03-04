@@ -10,27 +10,27 @@ public class QuardantTester {
 
     public static int whichQ(double x, double y) {
         // quadrant 1 or 4
-        if (x>0) {
-            if (y>0) {
+        if (x > 0) {
+            if (y > 0) {
                 return 1;
-            }
-            else if (y<0) {
+            } else if (y < 0) {
                 return 4;
+            } else {
+                return 0;
             }
-            else{return 0;}
         }
-        //quadrant 2 or 3
-        else if (x<0) {
-            if (y>0) {
+        // quadrant 2 or 3
+        else if (x < 0) {
+            if (y > 0) {
                 return 2;
-            }
-            else if (y<0) {
+            } else if (y < 0) {
                 return 3;
+            } else {
+                return 0;
             }
-            else{return 0;}
         }
         // x == 0
-        else{
+        else {
             return 0;
         }
     }

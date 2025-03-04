@@ -16,10 +16,10 @@ public class Receipt {
             subTotal += console.nextDouble();
         }
         System.out.println("Subtotal: " + subTotal);
-        double tax = subTotal/100*8;
+        double tax = subTotal / 100 * 8;
         System.out.println("Tax: " + tax);
-        double tip = subTotal/100*15;
+        double tip = subTotal / 100 * 15;
         System.out.println("Tip: " + tip);
-        System.out.println("Total: " + (subTotal+tip+tax));
+        System.out.println("Total: " + (subTotal + tip + tax));
     }
 }

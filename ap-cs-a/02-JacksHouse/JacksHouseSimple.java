@@ -6,7 +6,7 @@ public class JacksHouseSimple {
         String four = "This is the cat, \n" + three;
         String five = "This is the dog, \n" + four;
         String six = "This is the cow with the crumpled horn, \n" + five;
-        String seven = "This is the maiden all forlorn, \n" +six;
+        String seven = "This is the maiden all forlorn, \n" + six;
 
         System.out.println(one + two + three + four + five + six + seven);
     }

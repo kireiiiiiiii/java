@@ -1,19 +1,17 @@
-package StarsBoxes;
 import java.util.Scanner;
 
 public class StarsScanner {
     public static void main(String[] args) {
         int lenght = 0;
         int width = 0;
-        
+
         Scanner lenghtScanner = new Scanner(System.in);
-        while(true) {
+        while (true) {
             System.out.print("Lenght?");
             if (lenghtScanner.hasNextInt()) {
                 lenght = lenghtScanner.nextInt();
                 break;
-            }
-            else {
+            } else {
                 System.out.println("Your input wasn't a number!");
                 lenghtScanner.next();
             }
@@ -25,8 +23,7 @@ public class StarsScanner {
             if (widthScanner.hasNextInt()) {
                 width = widthScanner.nextInt();
                 break;
-            }
-            else {
+            } else {
                 System.out.println("Your input wasn't a number! ");
                 widthScanner.next();
             }
@@ -46,10 +43,10 @@ public class StarsScanner {
         }
         System.out.println();
     }
-    
+
     public static void box(int width, int lenght) {
         line(lenght);
-        
+
         for (int line = 1; line <= width - 2; line++) {
             System.out.print("*");
             for (int space = 1; space <= lenght - 2; space++) {

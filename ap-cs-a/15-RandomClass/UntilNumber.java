@@ -15,7 +15,6 @@ public class UntilNumber {
             counter++;
         }
         System.out.println("You won after " + counter + " tries!");
-        
 
     }
 

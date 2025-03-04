@@ -12,7 +12,7 @@ public class Cryptography {
          * --------------
          * n : int
          * Specifies the seed for our Caesar cypher. We assume that 0 <= n < 26.
-         * 
+         *
          * returns String
          * Return the Caesar cypher we create by "shifting" the alphabet over n times to
          * the right.
@@ -20,7 +20,7 @@ public class Cryptography {
          * Examples:
          * n = 1
          * >> zabc...vwxy (alphabet shifted over to the right 1 time)
-         * 
+         *
          * n = 25
          * >> bcde...xyza (alphabet shifted over to the right 25 times)
          */
@@ -40,7 +40,7 @@ public class Cryptography {
          * the alphabet.
          * c : char
          * The character we want to encrypt. We assume that c is lower-case.
-         * 
+         *
          * returns char
          * Returns the encrypted character using our cypher.
          * --------------
@@ -68,7 +68,7 @@ public class Cryptography {
          * the alphabet.
          * input : String
          * The message that we want to encrypt.
-         * 
+         *
          * returns String
          * Returns the encrypted message using our cypher.
          * --------------
@@ -93,7 +93,7 @@ public class Cryptography {
          * the alphabet.
          * c : char
          * The character we want to decrypt. We assume that c is lower-case.
-         * 
+         *
          * returns char
          * Returns the decrypted character using our cypher.
          * --------------
@@ -121,7 +121,7 @@ public class Cryptography {
          * the alphabet.
          * input : String
          * The message that we want to decrypt.
-         * 
+         *
          * returns String
          * Returns the decrypted message using our cypher.
          * --------------

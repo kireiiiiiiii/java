@@ -1,9 +1,9 @@
 public class IsItAVowel {
     public static void main(String[] args) {
-        assert(isVowel("A")) == true;
-        assert(isVowel("q")) == false;
-        assert(isNotVowel("Q")) == true;
-        assert(isNotVowel("A")) == false;
+        assert (isVowel("A")) == true;
+        assert (isVowel("q")) == false;
+        assert (isNotVowel("Q")) == true;
+        assert (isNotVowel("A")) == false;
     }
 
     public static boolean isVowel(String letter) {

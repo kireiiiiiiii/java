@@ -15,17 +15,17 @@ public class CreateCypher {
         int lenght = input.length();
         String output = "";
 
-        for (int currentIndex = 0; currentIndex<lenght; currentIndex++) {
+        for (int currentIndex = 0; currentIndex < lenght; currentIndex++) {
             curChar = input.charAt(currentIndex);
-            //defines if character is a letter (lowerCase or upperCase)
-            if ((curChar<=122 && curChar<=97) || (curChar<=90 && curChar>=65)) {
-                curChar+=tab;
-                //checks again
-                if ((curChar<=122 && curChar<=97) || (curChar<=90 && curChar>=65)) {
-                    curChar-=25;
+            // defines if character is a letter (lowerCase or upperCase)
+            if ((curChar <= 122 && curChar <= 97) || (curChar <= 90 && curChar >= 65)) {
+                curChar += tab;
+                // checks again
+                if ((curChar <= 122 && curChar <= 97) || (curChar <= 90 && curChar >= 65)) {
+                    curChar -= 25;
                 }
             }
-            output+=curChar;
+            output += curChar;
         }
         return output;
     }
@@ -40,13 +40,13 @@ public class CreateCypher {
         int lenght = input.length();
         int currentIndex = 0;
         String currentLetter = "";
-        for (int i = 0; i<lenght; i++) {
+        for (int i = 0; i < lenght; i++) {
             currentLetter = "" + input.charAt(i);
             currentIndex = albhabet.indexOf(currentLetter);
             if (currentIndex != -1) {
                 currentLetter = "" + cypherA.charAt(currentIndex);
             }
-            output +=currentLetter;
+            output += currentLetter;
         }
         return output;
     }

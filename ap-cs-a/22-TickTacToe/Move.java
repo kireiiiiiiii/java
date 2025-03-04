@@ -6,6 +6,7 @@ public class Move {
     public Move() {
         this(0, 0, " ");
     }
+
     public Move(int r, int c, String mark) {
         this.r = r;
         this.c = c;
@@ -13,8 +14,8 @@ public class Move {
     }
 
     // Can be used to convert user input to a move.
-    //  Takes a string of user input (e.g. "1,2") and a mark (e.g. "X"),
-    //  and converts it to a move. Returns that move object. 
+    // Takes a string of user input (e.g. "1,2") and a mark (e.g. "X"),
+    // and converts it to a move. Returns that move object.
     public static Move StringToMove(String str, String mark) {
         // Parse the input
         Integer r = null, c = null;
@@ -35,6 +36,7 @@ public class Move {
         }
         return null;
     }
+
     public String toString() {
         return r + "," + c;
     }

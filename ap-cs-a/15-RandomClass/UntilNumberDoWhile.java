@@ -10,7 +10,7 @@ public class UntilNumberDoWhile {
             counter++;
             roll1 = rand.nextInt(6) + 1;
             roll2 = rand.nextInt(6) + 1;
-            System.out.println("" + roll1 + " + " + roll2 " = ")
+            System.out.println("" + roll1 + " + " + roll2 + " = ");
         } while (!((roll1 + roll2) == 7));
 
         System.out.printf("You won after " + counter + " tries!");

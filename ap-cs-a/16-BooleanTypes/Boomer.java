@@ -5,13 +5,11 @@ public class Boomer {
         Scanner console = new Scanner(System.in);
         agePrompt(console);
     }
+
     public static void agePrompt(Scanner console) {
         System.out.print("Enter your age: ");
-        try {
-            int age = console.nextInt();
-        }
-        catch (Exception InputMis)                                                                                                                                                                        
-        
+        int age = console.nextInt();
+
         if (age > 18) {
             System.out.println("OK, Boomer.");
         }

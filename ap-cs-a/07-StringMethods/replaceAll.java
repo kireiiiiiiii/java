@@ -4,7 +4,7 @@ public class replaceAll {
     public static void main(String[] args) {
         System.out.println(stringReplace("1xx 2xx 3xx 4567", "xx", "OO"));
     }
-    
+
     public static String stringReplace(String input, String target, String replace) {
         if (input.indexOf(target) > -1) {
             int index = input.indexOf(target);

@@ -1,57 +1,57 @@
 public class AppMain {
     // You are writing an interactive Tic-Tac-Toe game.
-    //  If you have never played it before, do a google search and try it out.
+    // If you have never played it before, do a google search and try it out.
     // In this game, the user plays against the computer (this program).
-    // 
+    //
     // The class declarations are given to you. You will need to complete the
-    //  Board class. Most of its methods have signatures & comments that spec
-    //  out their behavior. You must implement those methods. To get started,
-    //  I suggest doing the following.
-    //    - If you don't know Tic-Tac-Toe, watch a YouTube video on it.
-    //    - Take a look over the main method. Try to understand...
-    //        - The object abstractions: Board, Move, & HumanPlayer/AiPlayer
-    //    - Look over the Board class and start implementing each method.
-    //        - Use the comments for each method to understand their purpose.
-    //        - I'd recommend starting at the top of the file and working 
-    //          your way down. Once you implement renderToString you should be
-    //          able to start testing (running the program, looking at the output).
-    // 
+    // Board class. Most of its methods have signatures & comments that spec
+    // out their behavior. You must implement those methods. To get started,
+    // I suggest doing the following.
+    // - If you don't know Tic-Tac-Toe, watch a YouTube video on it.
+    // - Take a look over the main method. Try to understand...
+    // - The object abstractions: Board, Move, & HumanPlayer/AiPlayer
+    // - Look over the Board class and start implementing each method.
+    // - Use the comments for each method to understand their purpose.
+    // - I'd recommend starting at the top of the file and working
+    // your way down. Once you implement renderToString you should be
+    // able to start testing (running the program, looking at the output).
+    //
     // Example output...
-    //      |   |   
-    //   -----------
-    //      |   |
-    //   -----------
-    //      |   |
+    // | |
+    // -----------
+    // | |
+    // -----------
+    // | |
     //
-    //   Your move (e.g. '0,2')? 1,0
+    // Your move (e.g. '0,2')? 1,0
     //
-    //   AI's move: 0,2
+    // AI's move: 0,2
     //
-    //      |   | O
-    //   -----------
-    //    X |   |
-    //   -----------
-    //      |   |
+    // | | O
+    // -----------
+    // X | |
+    // -----------
+    // | |
     //
-    //   Your move (e.g. '0,2')? 1,1
+    // Your move (e.g. '0,2')? 1,1
     //
-    //   AI's move: 0,0
+    // AI's move: 0,0
     //
-    //    O |   | O
-    //   -----------
-    //    X | X |
-    //   -----------
-    //      |   |
+    // O | | O
+    // -----------
+    // X | X |
+    // -----------
+    // | |
     //
-    //   Your move (e.g. '0,2')? 1,2
+    // Your move (e.g. '0,2')? 1,2
     //
-    //    O |   | O
-    //   -----------
-    //    X | X | X
-    //   -----------
-    //      |   |
-    // 
-    //   You win!!!
+    // O | | O
+    // -----------
+    // X | X | X
+    // -----------
+    // | |
+    //
+    // You win!!!
 
     public static void main(String[] args) {
         // Setup

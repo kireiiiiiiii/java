@@ -9,20 +9,21 @@
 // |\....../|
 // | \..../ |
 // |  \../  |
-// |   \/   | 
-// |   /\   | 
-// |  /..\  | 
-// | /....\ | 
+// |   \/   |
+// |   /\   |
+// |  /..\  |
+// | /....\ |
 // |/......\|
 // +--------+
 
 public class HourglassAscii {
     public static int SIZE = 4;
+
     public static void main(String[] args) {
         printLine();
         printTop();
         printBottom();
-        printLine();    
+        printLine();
     }
 
     public static void printCharacter(int count, String character) {
@@ -36,9 +37,9 @@ public class HourglassAscii {
     }
 
     public static void printDots(int dotCount) {
-        printCharacter(dotCount, ".");   
+        printCharacter(dotCount, ".");
     }
-    
+
     public static void printLine() {
         System.out.print("+");
         for (int dash = 1; dash <= SIZE * 2; dash++) {
@@ -50,7 +51,7 @@ public class HourglassAscii {
     public static void printTop() {
         for (int line = 1; line <= SIZE; line++) {
             int spaceCount = line - 1;
-            int dotCount = (SIZE-line)*2;
+            int dotCount = (SIZE - line) * 2;
 
             System.out.print("|");
             printSpaces(spaceCount);
@@ -59,14 +60,14 @@ public class HourglassAscii {
             System.out.print("/");
             printSpaces(spaceCount);
             System.out.println('|');
-        }    
+        }
     }
 
     public static void printBottom() {
         for (int line = 1; line <= SIZE; line++) {
             int spaceCount = SIZE - line;
-            int dotCount = (line -1)*2;
-            
+            int dotCount = (line - 1) * 2;
+
             System.out.print("|");
             printSpaces(spaceCount);
             System.out.print("/");

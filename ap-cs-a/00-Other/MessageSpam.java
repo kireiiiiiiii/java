@@ -1,4 +1,3 @@
-package Other;
 public class MessageSpam {
     public static void first() {
         System.out.println("spam");

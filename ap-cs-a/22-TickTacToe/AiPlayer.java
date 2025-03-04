@@ -3,7 +3,7 @@ public class AiPlayer extends Player {
 
     public Move getNextMove(Board board) {
         int numEmpty = board.numberEmpty();
-        int offset = (int)(Math.random() * numEmpty);
+        int offset = (int) (Math.random() * numEmpty);
         for (int r = 0; r < board.rows(); ++r) {
             for (int c = 0; c < board.columns(); ++c) {
                 if (board.isEmpty(r, c)) {

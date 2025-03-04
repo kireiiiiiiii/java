@@ -29,6 +29,7 @@ public class IPod {
 
     /**
      * Changes the currentSong to the provided song.
+     *
      * @param song (String) next song to be played.
      */
     public void changeSong(String song) {
@@ -37,6 +38,7 @@ public class IPod {
 
     /**
      * Changes the volument to the provided volume up to 100 or down to 0.
+     *
      * @param volume (int) volume level to set
      */
     public boolean changeVolume(int volume) {
@@ -72,6 +74,7 @@ public class IPod {
 
     /**
      * Will increase battery by 1.0 up to MAX_BATTERY
+     *
      * @return true if increaseBattery was successful, false otherwise
      */
     private boolean increaseBattery() {
@@ -80,17 +83,19 @@ public class IPod {
 
     /**
      * Will decrease battery by 1.0 down to 0.0
+     *
      * @return true if increaseBattery was successful, false otherwise
      */
-    private boolean decreaseBattery() {
-        return increaseBattery(-1.0);
-    }
+    // private boolean decreaseBattery() {
+    // return increaseBattery(-1.0);
+    // }
 
     /**
      * Will increase battery by specified amount up to MAX_BATTERY,
      * or decrease as low as 0.0.
      * NOTE: Negative values of amount will decrease battery.
-     * @param amount (double) - the amount to increase/decrease battery life. 
+     *
+     * @param amount (double) - the amount to increase/decrease battery life.
      * @return true if increaseBattery was successful, false otherwise
      */
     private boolean increaseBattery(double amount) {
@@ -110,9 +115,8 @@ public class IPod {
     public String toString() {
         if (this.powerStateOn) {
             return String.format("song = \"%s\"\nvolume = %d\nbattery life = %.2f\n",
-                                    this.currentSong, this.volume, this.batteryLife);
-        }
-        else {
+                    this.currentSong, this.volume, this.batteryLife);
+        } else {
             return "IPod turned off.";
         }
     }

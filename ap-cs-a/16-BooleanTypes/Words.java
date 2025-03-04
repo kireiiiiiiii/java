@@ -2,7 +2,7 @@ public class Words {
     public static void main(String[] args) {
         String word1 = "Bare";
         String word2 = "Blare";
-       
+
         // Rhyme test
         if (validLenght(word1) && rhymes(word1, word2))
             System.out.println("They rhyme!");
@@ -12,7 +12,7 @@ public class Words {
             System.out.println("They alliterate!");
     }
 
-    //Boolean Zen methods
+    // Boolean Zen methods
 
     public static boolean validLenght(String word) {
         return word.length() >= 2;
