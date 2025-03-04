@@ -1,0 +1,9 @@
+# Maven build filess
+/target
+/dependency-reduced-pom.xml
+
+# Log files
+*.log
+
+# macOS
+.DS_Store
